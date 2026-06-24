@@ -1,5 +1,5 @@
 <p align="center">
-<img width="750" align="center" altlt="Image" src="https://github.com/user-attachments/assets/38303520-aa24-4bb2-b22f-367abe889bb3" />
+<img width="750" align="center" alt="Banner Image" src="docs/screenshots/00_start_page.png" />
 </p>
 
 # AeroOps AI ✈️
