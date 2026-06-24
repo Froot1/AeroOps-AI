@@ -49,7 +49,9 @@ AeroOps AI resolves these challenges by combining **LLM semantic reasoning** wit
 
 The operational workflow of AeroOps AI is designed as a directed acyclic graph (DAG) containing validation, parallel LLM analysis, deterministic evaluation, interactive pause/resume, and briefing generation:
 
-![AeroOps AI Architecture Flowchart](architecture.png)
+<p align="center">
+<img width="520" align="center" altlt="Image" src="https://github.com/user-attachments/assets/30143149-6b42-4c8d-a319-d9638ffb6718" />
+</p>
 
 ---
 
@@ -186,7 +188,7 @@ uv run python -m pytest tests/test_aeroops.py
 tests/test_aeroops.py ..........                                         [100%]
 ============================== warnings summary ===============================
 ... (deprecation/library warnings from environments) ...
-======================= 10 passed, 5 warnings in 4.16s ========================
+======================= 11 passed, in 4.16s ========================
 ```
 
 ### 4. Run Evaluation Grader
