@@ -1,5 +1,5 @@
 <p align="center">
-<img width="750" align="center" alt="Banner Image" src="https://raw.githubusercontent.com/Froot1/AeroOps-AI/gh-pages/docs/screenshots/00_start_page.png" />
+<img width="750" align="center" alt="Banner Image" src="https://raw.githubusercontent.com/Froot1/AeroOps-AI/AeroOps-pages/docs/screenshots/00_start_page.png" />
 </p>
 
 # AeroOps AI ✈️
