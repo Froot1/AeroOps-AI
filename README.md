@@ -50,7 +50,7 @@ AeroOps AI resolves these challenges by combining **LLM semantic reasoning** wit
 The operational workflow of AeroOps AI is designed as a directed acyclic graph (DAG) containing validation, parallel LLM analysis, deterministic evaluation, interactive pause/resume, and briefing generation:
 
 <p align="center">
-<img width="520" align="center" altlt="Image" src="https://github.com/user-attachments/assets/b4ea8de0-98f6-4922-b06d-2026bb4850d6" />
+<img width="520" align="center" altlt="Image" src="https://github.com/user-attachments/assets/30143149-6b42-4c8d-a319-d9638ffb6718" />
 </p>
 
 ---
