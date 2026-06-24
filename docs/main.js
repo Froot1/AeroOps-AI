@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         testing: {
             title: 'Automated Pytest Results',
-            img: 'slides/08_testing_results.png',
+            img: 'screenshots/08_testing_results.png',
             audio: 'voiceovers/08_testing.mp3',
             narration: 'The project also includes automated tests. The final test result shows: 11 tests passed. This confirms that the main workflow, validation, risk scoring, and security behavior are working correctly.'
         },
