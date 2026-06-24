@@ -1,6 +1,7 @@
 <p align="center">
 <img width="520" align="center" altlt="Image" src="https://github.com/user-attachments/assets/38303520-aa24-4bb2-b22f-367abe889bb3" />
 </p>
+
 # AeroOps AI ✈️
 
 AeroOps AI is a production-grade, multi-agent flight operations assistant built on the **Google Agent Development Kit (ADK 2.0)** and orchestrated via **Antigravity**. It streamlines pre-flight operational dispatch by parsing flight requests, analyzing unstructured NOTAMs and weather forecasts in parallel, evaluating risk using a deterministic Python scoring engine, enforcing robust security boundaries, and providing human-in-the-loop (HITL) review controls for high-risk flights.
