@@ -354,3 +354,7 @@ AeroOps AI is built for **airline operations control centers (OCC) and dispatche
 * **Decision Support:** Speeds up pre-flight triaging of dense, unstructured weather and airport reports.
 * **Operational Control:** Prevents LLM hallucinations or adversarial instructions from making flight release decisions by combining agent analysis with deterministic safety scoring and human oversight.
 * **Workflow Oversight:** Retains human authority over safety-critical actions while automating repetitive parsing tasks.
+
+## Author :black_nib:
+
+* __*Fahad Alonazi*__ <[Froot1](https://github.com/Froot1)>
