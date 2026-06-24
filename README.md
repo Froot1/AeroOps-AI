@@ -188,7 +188,7 @@ uv run python -m pytest tests/test_aeroops.py
 tests/test_aeroops.py ..........                                         [100%]
 ============================== warnings summary ===============================
 ... (deprecation/library warnings from environments) ...
-======================= 10 passed, 5 warnings in 4.16s ========================
+======================= 11 passed, in 4.16s ========================
 ```
 
 ### 4. Run Evaluation Grader
