@@ -65,7 +65,7 @@ aeroops_runner = InMemoryRunner(app=aeroops_adk_app)
 async def read_dashboard(request: Request):
     """Render the AeroOps AI dashboard."""
     try:
-        index_path = templates_experimental_dir / "index.html"
+        index_path = templates_dir / "index.html"
         html_content = index_path.read_text(encoding="utf-8")
         return HTMLResponse(content=html_content, status_code=200)
     except Exception as e:
