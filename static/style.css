@@ -1,0 +1,460 @@
+/* AeroOps AI Dashboard Styling */
+:root {
+    --bg-primary: #0a1f2d;
+    /* dark blue */
+    --bg-card: rgba(255, 255, 255, 0.08);
+    --accent-teal: #00bcd4;
+    --accent-amber: #ffc107;
+    --text-primary: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background: var(--bg-primary) url("/static/images/control_room.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Dark overlay so text remains readable */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 31, 45, 0.85);
+    /* transparent version of --bg-primary */
+    z-index: 1;
+    pointer-events: none;
+}
+
+.hero {
+    position: relative;
+    z-index: 2;
+    background: var(--bg-card);
+    padding: 2rem 1rem;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    margin: 0 auto;
+    font-size: 2.2rem;
+    color: var(--accent-teal);
+    max-width: 900px;
+}
+
+.hero .subtitle {
+    margin: 0.5rem auto 1rem;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin: 0.8rem auto;
+    max-width: 900px;
+}
+
+.badge {
+    background: rgba(0, 188, 212, 0.12);
+    color: var(--accent-teal);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(0, 188, 212, 0.25);
+}
+
+.hero-credits {
+    font-size: 0.95rem;
+    color: var(--accent-amber);
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.message-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+.container {
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(520px, 1fr) minmax(520px, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.form-section,
+.results-section {
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Route visualization */
+.route_path {
+    font-family: monospace;
+    color: var(--accent-teal);
+    margin-top: 0.5rem;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: var(--accent-amber);
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--accent-teal);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-weight: 600;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background: var(--accent-teal);
+    color: #fff;
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.btn-approve {
+    background: #4caf50;
+    color: #fff;
+    margin-right: 0.5rem;
+}
+
+.btn-reject {
+    background: rgba(244, 67, 54, 0.2);
+    color: #ffcdd2;
+    border: 1px solid rgba(244, 67, 54, 0.4);
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-reject:hover {
+    background: rgba(244, 67, 54, 0.35);
+    border-color: rgba(244, 67, 54, 0.6);
+}
+
+.hidden {
+    display: none;
+}
+
+#loading-spinner {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid var(--accent-teal);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin: 1rem auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#results-content p {
+    margin: 0.5rem 0;
+}
+
+#final_briefing {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.8rem;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* =========================
+Demo Scenario Buttons
+========================= */
+
+.demo-scenarios {
+    margin: 24px 0 32px;
+    padding: 22px;
+    border-radius: 18px;
+    background: rgba(8, 27, 39, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+.section-heading h3 {
+    margin: 0 0 8px;
+    color: #f8fafc;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #cbd5e1;
+    font-size: 0.98rem;
+}
+
+.demo-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 1rem;
+}
+
+.demo-btn {
+    width: 100%;
+    min-height: 88px;
+    padding: 18px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    background: #f8fafc;
+    color: #0f172a;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.demo-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 193, 7, 0.6);
+}
+
+.demo-btn:active {
+    transform: translateY(0);
+}
+
+.demo-title {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.demo-desc {
+    display: block;
+    font-size: 0.84rem;
+    font-weight: 600;
+    color: #475569;
+    line-height: 1.35;
+}
+
+/* Optional subtle color accents */
+.low-demo {
+    border-left: 6px solid #22c55e;
+}
+
+.medium-demo {
+    border-left: 6px solid #f59e0b;
+}
+
+.high-demo {
+    border-left: 6px solid #ef4444;
+}
+
+.security-demo {
+    border-left: 6px solid #8b5cf6;
+}
+
+.invalid-demo {
+    border-left: 6px solid #64748b;
+}
+
+/* Make Security and Invalid look balanced if odd number of buttons */
+.security-demo,
+.invalid-demo {
+    min-height: 88px;
+}
+
+/* Mobile layout */
+@media (max-width: 960px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .demo-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .demo-btn {
+        min-height: 82px;
+    }
+}
+
+/* =========================
+   Compact Result Badges
+   ========================= */
+
+#risk_score,
+#risk_level,
+#recommended_action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    min-width: 72px;
+    max-width: fit-content;
+    padding: 0.45rem 0.9rem;
+    border-radius: 999px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+}
+
+/* Prevent short values from stretching across the full results panel */
+#results-content #risk_score,
+#results-content #risk_level,
+#results-content #recommended_action {
+    width: fit-content !important;
+    display: inline-flex !important;
+}
+
+/* Optional colors for short result badges */
+#risk_score {
+    background: rgba(0, 188, 212, 0.15);
+    color: var(--accent-teal);
+    border: 1px solid rgba(0, 188, 212, 0.35);
+}
+
+#risk_level {
+    background: rgba(0, 188, 212, 0.15);
+    color: var(--accent-teal);
+    border: 1px solid rgba(0, 188, 212, 0.35);
+}
+
+#recommended_action {
+    background: rgba(255, 193, 7, 0.13);
+    color: var(--accent-amber);
+    border: 1px solid rgba(255, 193, 7, 0.35);
+}
+
+/* =========================
+   Risk Color Badges
+   ========================= */
+
+.risk-badge {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: fit-content !important;
+    min-width: 82px;
+    padding: 0.45rem 0.95rem;
+    border-radius: 999px;
+    font-weight: 900;
+    letter-spacing: 0.04em;
+    line-height: 1.2;
+    border: 1px solid transparent;
+}
+
+/* LOW = Green */
+.risk-low {
+    background: rgba(34, 197, 94, 0.18) !important;
+    color: #22c55e !important;
+    border-color: rgba(34, 197, 94, 0.45) !important;
+}
+
+/* MEDIUM = Orange */
+.risk-medium {
+    background: rgba(245, 158, 11, 0.20) !important;
+    color: #f59e0b !important;
+    border-color: rgba(245, 158, 11, 0.50) !important;
+}
+
+/* HIGH = Red */
+.risk-high {
+    background: rgba(239, 68, 68, 0.20) !important;
+    color: #ef4444 !important;
+    border-color: rgba(239, 68, 68, 0.50) !important;
+}
+
+/* Action colors */
+.action-proceed {
+    background: rgba(34, 197, 94, 0.18) !important;
+    color: #22c55e !important;
+    border-color: rgba(34, 197, 94, 0.45) !important;
+}
+
+.action-reroute {
+    background: rgba(245, 158, 11, 0.20) !important;
+    color: #f59e0b !important;
+    border-color: rgba(245, 158, 11, 0.50) !important;
+}
+
+.action-hold,
+.action-cancel {
+    background: rgba(239, 68, 68, 0.20) !important;
+    color: #ef4444 !important;
+    border-color: rgba(239, 68, 68, 0.50) !important;
+}

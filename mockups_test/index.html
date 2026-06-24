@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroOps AI Interactive Walkthrough Mockup</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- VIEW 1: Title Screen -->
+    <section id="view-title" class="view-section active">
+        <div class="glow-container">
+            <div class="glow-orb"></div>
+        </div>
+        <div class="title-content">
+            <div class="logo-wrapper">
+                <span class="logo-icon">✈️</span>
+            </div>
+            <h1>AEROOPS AI</h1>
+            <p class="subtitle">Multi-Agent Flight Operations Intelligence Assistant</p>
+            <p class="desc">Interactive Demo Walkthrough & Video Recording Presentation</p>
+            <button id="btn-enter" class="btn btn-primary">LAUNCH INTERACTIVE DASHBOARD</button>
+            <div class="credits">© Fahad Alonazi with ❤️ 2026</div>
+        </div>
+    </section>
+
+    <!-- VIEW 2: Dashboard Overview -->
+    <section id="view-dashboard" class="view-section">
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h2>AeroOps AI Dispatch Control</h2>
+                <p>Select a demo scenario below to execute the multi-agent analysis workflow.</p>
+            </div>
+            <button id="btn-back-title" class="btn btn-secondary">← Start Page</button>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Demo Buttons Card -->
+            <div class="card demo-card">
+                <h3>Select Demo Scenario</h3>
+                <p class="card-desc">Clicking a scenario loads the flight parameters and opens its analysis result slide.</p>
+                
+                <div class="demo-buttons-container">
+                    <button class="demo-select-btn low" data-target="low">
+                        <span class="demo-indicator"></span>
+                        <div class="demo-info">
+                            <span class="demo-title">LOW Risk Demo</span>
+                            <span class="demo-meta">SV1200 | RUH → JED | Stable weather</span>
+                        </div>
+                    </button>
+
+                    <button class="demo-select-btn medium" data-target="medium">
+                        <span class="demo-indicator"></span>
+                        <div class="demo-info">
+                            <span class="demo-title">MEDIUM Risk Demo</span>
+                            <span class="demo-meta">AA123 | JFK → LAX | Weather reroute</span>
+                        </div>
+                    </button>
+
+                    <button class="demo-select-btn high" data-target="high_pending">
+                        <span class="demo-indicator"></span>
+                        <div class="demo-info">
+                            <span class="demo-title">HIGH Risk (Pending Review)</span>
+                            <span class="demo-meta">SV1024 | Suspended for HITL</span>
+                        </div>
+                    </button>
+
+                    <button class="demo-select-btn high" data-target="high_approved">
+                        <span class="demo-indicator"></span>
+                        <div class="demo-info">
+                            <span class="demo-title">HIGH Risk (Approved)</span>
+                            <span class="demo-meta">SV1024 | Briefing generated</span>
+                        </div>
+                    </button>
+
+                    <button class="demo-select-btn security" data-target="security_pending">
+                        <span class="demo-indicator"></span>
+                        <div class="demo-info">
+                            <span class="demo-title">Security Shield (Pending Review)</span>
+                            <span class="demo-meta">SV9999 | Injection detected</span>
+                        </div>
+                    </button>
+
+                    <button class="demo-select-btn security" data-target="security_approved">
+                        <span class="demo-indicator"></span>
+                        <div class="demo-info">
+                            <span class="demo-title">Security Shield (Approved)</span>
+                            <span class="demo-meta">SV9999 | Security briefing</span>
+                        </div>
+                    </button>
+
+                    <button class="demo-select-btn invalid" data-target="invalid">
+                        <span class="demo-indicator"></span>
+                        <div class="demo-info">
+                            <span class="demo-title">Invalid Input Demo</span>
+                            <span class="demo-meta">1024 | Format error validation</span>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="additional-actions">
+                    <h3>Documentation & Logs</h3>
+                    <div class="extra-buttons">
+                        <button class="demo-select-btn testing" data-target="testing">
+                            <span class="demo-indicator"></span>
+                            <div class="demo-info">
+                                <span class="demo-title">Automated Testing Results</span>
+                                <span class="demo-meta">Pytest suite: 11 passed</span>
+                            </div>
+                        </button>
+                        <button class="demo-select-btn conclusion" data-target="conclusion">
+                            <span class="demo-indicator"></span>
+                            <div class="demo-info">
+                                <span class="demo-title">System Conclusion</span>
+                                <span class="demo-meta">Safety, validation, and deterministic design</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Preview Card -->
+            <div class="card preview-card">
+                <h3>Live Walkthrough Preview</h3>
+                <p class="card-desc">Preview of the dashboard structure. Select a scenario on the left to see results.</p>
+                <div class="mockup-dashboard-frame">
+                    <img src="../screenshots_experimental/00_dashboard_overview.png" alt="Dashboard Preview" class="frame-img">
+                    <div class="frame-overlay">
+                        <span class="glowing-cursor">👆 Select a demo to begin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-credits">© Fahad Alonazi with ❤️ 2026</div>
+    </section>
+
+    <!-- VIEW 3: Detail/Result Screen -->
+    <section id="view-detail" class="view-section">
+        <header class="detail-header">
+            <button id="btn-back-dashboard" class="btn btn-secondary">← Back to Dashboard</button>
+            <h2 id="detail-title">LOW Risk Scenario Analysis</h2>
+        </header>
+
+        <div class="detail-container">
+            <!-- Slide Image Frame -->
+            <div class="slide-frame-card card">
+                <img id="detail-slide-img" src="" alt="Slide Details" class="slide-img">
+            </div>
+
+            <!-- Voiceover Control Panel -->
+            <div class="voiceover-card card">
+                <h3>Voiceover & Narration</h3>
+                <p class="card-desc">Play the pre-recorded voice narration for this section of your presentation video.</p>
+
+                <div class="audio-control-panel">
+                    <button id="btn-play-audio" class="audio-btn">
+                        <span class="play-icon">▶</span>
+                        <span class="pause-icon hidden">⏸</span>
+                    </button>
+                    <div class="audio-progress-bar">
+                        <div id="audio-progress" class="progress-fill"></div>
+                    </div>
+                    <span id="audio-time" class="audio-time-label">0:00</span>
+                </div>
+
+                <div class="narration-box">
+                    <h4>Console Transcript:</h4>
+                    <p id="detail-narration-text" class="narration-text">Narration content loads here...</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-credits">© Fahad Alonazi with ❤️ 2026</div>
+    </section>
+
+    <!-- Hidden audio element -->
+    <audio id="voiceover-audio"></audio>
+
+    <script src="main.js"></script>
+</body>
+</html>
