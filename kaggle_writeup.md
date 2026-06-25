@@ -96,7 +96,7 @@ High-risk operational scenarios (score $\ge 80$) and security events automatical
 
 ### E. Evaluation and Testing
 To ensure the system's routing, safety containment, and risk classification behave reliably, the project includes automated tests and local evaluation grader scripts:
-* **Pytest Verification Suite:** Verifies validation, security, and workflow transitions, achieving **10 passed** tests and **5 warnings** (non-blocking library warnings) during test runs.
+* **Pytest Verification Suite:** Verifies validation, security, and workflow transitions, achieving **11 passed** tests (non-blocking library warnings) during test runs.
 * **Local Grader and Traces:** Evaluates compliance offline using `generate_traces_aeroops.py` and `grade_local_aeroops.py` across different flight scenarios to measure `aeroops_routing_correctness` and `aeroops_security_containment`.
 
 ### F. Business Use Case (Agents for Business Track)
@@ -252,8 +252,8 @@ This shows that AeroOps AI validates inputs before analysis and rejects invalid 
 
 The project passed automated tests successfully:
 
-* Unit Tests: 10 passed
-* Warnings: 5 non-blocking warnings
+* Unit Tests: 11 passed
+
 * Low Risk Scenario: passed
 * Medium Risk Scenario: passed
 * High Risk Scenario: passed
@@ -269,7 +269,8 @@ uv run python -m pytest tests/test_aeroops.py
 Final result:
 
 ```text
-10 passed, 5 warnings
+tests/test_aeroops.py ...........                       [100%]
+===================== 11 passed in 1.56s =====================
 ```
 
 The evaluation confirms that the system routes cases correctly, applies deterministic risk scoring, blocks unsafe prompt injection attempts, validates input, and supports Human-in-the-Loop review.
