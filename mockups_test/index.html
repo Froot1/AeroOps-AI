@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AeroOps AI Interactive Walkthrough Mockup</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <!-- VIEW 1: Title Screen -->
@@ -16,7 +20,22 @@
         </div>
         <div class="title-content">
             <div class="logo-wrapper">
-                <span class="logo-icon">✈️</span>
+                    <div class="logo-plane">
+                        <svg class="airplane-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <defs>
+                                <linearGradient id="plane-gradient-logo" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff" />
+                                    <stop offset="60%" stop-color="#e6e6e6" />
+                                    <stop offset="100%" stop-color="#cccccc" />
+                                </linearGradient>
+                            </defs>
+                            <path
+                                d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"
+                                fill="url(#plane-gradient-logo)" />
+                        </svg>
+                        <div class="nav-light red-light"></div>
+                        <div class="nav-light green-light"></div>
+                    </div>
             </div>
             <h1>AEROOPS AI</h1>
             <p class="subtitle">Multi-Agent Flight Operations Intelligence Assistant</p>
@@ -40,8 +59,9 @@
             <!-- Demo Buttons Card -->
             <div class="card demo-card">
                 <h3>Select Demo Scenario</h3>
-                <p class="card-desc">Clicking a scenario loads the flight parameters and opens its analysis result slide.</p>
-                
+                <p class="card-desc">Clicking a scenario loads the flight parameters and opens its analysis result
+                    slide.</p>
+
                 <div class="demo-buttons-container">
                     <button class="demo-select-btn low" data-target="low">
                         <span class="demo-indicator"></span>
@@ -124,9 +144,10 @@
             <!-- Visual Preview Card -->
             <div class="card preview-card">
                 <h3>Live Walkthrough Preview</h3>
-                <p class="card-desc">Preview of the dashboard structure. Select a scenario on the left to see results.</p>
+                <p class="card-desc">Preview of the dashboard structure. Select a scenario on the left to see results.
+                </p>
                 <div class="mockup-dashboard-frame">
-                    <img src="../screenshots_experimental/00_dashboard_overview.png" alt="Dashboard Preview" class="frame-img">
+                    <img src="slides/00_dashboard_overview.png" alt="Dashboard Preview" class="frame-img">
                     <div class="frame-overlay">
                         <span class="glowing-cursor">👆 Select a demo to begin</span>
                     </div>
@@ -152,7 +173,8 @@
             <!-- Voiceover Control Panel -->
             <div class="voiceover-card card">
                 <h3>Voiceover & Narration</h3>
-                <p class="card-desc">Play the pre-recorded voice narration for this section of your presentation video.</p>
+                <p class="card-desc">Play the pre-recorded voice narration for this section of your presentation video.
+                </p>
 
                 <div class="audio-control-panel">
                     <button id="btn-play-audio" class="audio-btn">
@@ -179,4 +201,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
