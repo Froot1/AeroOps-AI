@@ -92,7 +92,7 @@ To protect the integrity of the flight dispatch system, a defense-in-depth model
 ### D. Human-in-the-Loop (HITL)
 High-risk operational scenarios (score $\ge 80$) and security events automatically trigger an asynchronous interrupt in the ADK workflow:
 * **Suspended Workflow State:** Execution halts and the session status is set to `suspended`.
-* **dispatcher Approval/Rejection Gate:** The workflow waits for the user to submit an approval/rejection override decision via the FastAPI `/aeroops/resume` endpoint or the dashboard UI before completing and generating the final briefing.
+* **Dispatcher Approval/Rejection Gate:** The workflow waits for the user to submit an approval/rejection override decision via the FastAPI `/aeroops/resume` endpoint or the dashboard UI before completing and generating the final briefing.
 
 ### E. Evaluation and Testing
 To ensure the system's routing, safety containment, and risk classification behave reliably, the project includes automated tests and local evaluation grader scripts:
