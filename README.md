@@ -109,10 +109,10 @@ To ensure reliable routing and safety containment, AeroOps AI includes a local e
 * **Workflow:** Bypasses human review and outputs the final flight briefing directly.
 
 ### 2. Medium-Risk Flight (MEDIUM Risk Demo)
-* **Flight Number:** `AA1234`
+* **Flight Number:** `AA123`
 * **Route:** `JFK` (New York) to `LAX` (Los Angeles)
 * **Input:** Convective thunderstorm activity (`TSRA`) near departure route, clear NOTAMs.
-* **Risk Score:** `45`
+* **Risk Score:** `50`
 * **Risk Level:** `MEDIUM`
 * **Workflow:** Bypasses human review, highlights the weather warning, and outputs the final flight briefing.
 
