@@ -28,43 +28,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const scenarios = {
         low: {
             title: 'LOW Risk Scenario Analysis',
-            img: '../screenshots_experimental/01_low_risk_scenario.png',
+            img: 'slides/01_low_risk_scenario.png',
             audio: 'voiceovers/03_low_risk.mp3',
             narration: 'First, I will run the LOW Risk scenario. The flight is SV1200 from RUH to JED. There are no major NOTAM restrictions and the weather is stable. The result is: Risk Score: 10, Risk Level: LOW, Recommended Action: PROCEED. This means the flight can continue without human review.'
         },
         medium: {
             title: 'MEDIUM Risk Scenario Analysis',
-            img: '../screenshots_experimental/02_medium_risk_scenario.png',
+            img: 'slides/02_medium_risk_scenario.png',
             audio: 'voiceovers/04_medium_risk.mp3',
             narration: 'Next, I will run the MEDIUM Risk scenario. This case includes thunderstorm activity near the route. The result is: Risk Score: 50, Risk Level: MEDIUM, Recommended Action: RE-ROUTE. This shows that the system recommends adjusting the route due to weather risk.'
         },
         high_pending: {
             title: 'HIGH Operational Risk Scenario Analysis (Pending Review)',
-            img: '../screenshots_experimental/03_high_risk_pending_review.png',
+            img: 'slides/03_high_risk_pending_review.png',
             audio: 'voiceovers/05_high_risk.mp3',
             narration: 'Now I will run the HIGH Risk scenario. This case includes a runway closure, taxiway restriction, possible ground delays, strong winds, and high temperature. The result is: Risk Score: 80, Risk Level: HIGH, Recommended Action: HOLD. Because this is a high-risk case, the system requires Human-in-the-Loop review.'
         },
         high_approved: {
             title: 'HIGH Operational Risk Scenario Analysis (Approved)',
-            img: '../screenshots_experimental/04_high_risk_approved.png',
+            img: 'slides/04_high_risk_approved.png',
             audio: 'voiceovers/05_high_risk.mp3',
             narration: 'After human review approval, the system generates the final operational briefing for the HIGH Risk scenario.'
         },
         security_pending: {
             title: 'Security Injection Attack Analysis (Pending Review)',
-            img: '../screenshots_experimental/05_security_injection_pending_review.png',
+            img: 'slides/05_security_injection_pending_review.png',
             audio: 'voiceovers/06_security.mp3',
             narration: 'Next, I will test the security layer. This input contains a prompt injection attempt. AeroOps AI detects the unsafe instruction and activates the Security Shield, requiring human review.'
         },
         security_approved: {
             title: 'Security Injection Attack Analysis (Approved)',
-            img: '../screenshots_experimental/06_security_injection_approved.png',
+            img: 'slides/06_security_injection_approved.png',
             audio: 'voiceovers/06_security.mp3',
             narration: 'After human review, the system generates a security-focused final briefing.'
         },
         invalid: {
             title: 'Invalid Input Validation Test',
-            img: '../screenshots_experimental/07_invalid_input_scenario.png',
+            img: 'slides/07_invalid_input_scenario.png',
             audio: 'voiceovers/07_invalid_input.mp3',
             narration: 'Finally, I will test input validation. This case uses an invalid flight number format: 1024. The system rejects the request and returns: Risk Score: 100, Risk Level: HIGH, Recommended Action: CANCEL. The final briefing explains that the flight number must contain two or three letters followed by one to four digits.'
         },
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         conclusion: {
             title: 'System Conclusion & Architecture',
-            img: '../screenshots_experimental/00_start_page.png',
+            img: 'slides/00_start_page.png',
             audio: 'voiceovers/09_conclusion.mp3',
             narration: 'AeroOps AI demonstrates how agentic AI can support aviation operations while keeping safety, validation, security, deterministic scoring, and human oversight at the center. Thank you.'
         }
