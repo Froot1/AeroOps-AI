@@ -192,8 +192,6 @@ uv run python -m pytest tests/test_aeroops.py
 **Pytest Verification Results:**
 ```text
 tests/test_aeroops.py ..........                                         [100%]
-============================== warnings summary ===============================
-... (deprecation/library warnings from environments) ...
 ======================= 11 passed, in 4.16s ========================
 ```
 
@@ -354,7 +352,7 @@ High-risk flights (score $\ge 80$) and security events suspend the automated rel
 
 ### E. Evaluation and Testing
 Reliability and routing correctness are validated using automated tools:
-* **Pytest Verification:** A suite of unit and integration tests verifies the workflow nodes, validation logic, and security block behavior, resulting in **10 passed** tests and **5 warnings** (non-blocking deprecation/library warnings).
+* **Pytest Verification:** A suite of unit and integration tests verifies the workflow nodes, validation logic, and security block behavior, resulting in **11 passed** tests (non-blocking deprecation/library warnings).
 * **Local Grader and Traces:** Uses `generate_traces_aeroops.py` and `grade_local_aeroops.py` to evaluate trace data against `aeroops_routing_correctness` and `aeroops_security_containment` metrics.
 
 ### F. Business Use Case (Agents for Business Track)
