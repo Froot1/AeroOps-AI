@@ -191,8 +191,8 @@ uv run python -m pytest tests/test_aeroops.py
 
 **Pytest Verification Results:**
 ```text
-tests/test_aeroops.py ..........                                         [100%]
-======================= 11 passed, in 4.16s ========================
+tests/test_aeroops.py ...........                       [100%]
+===================== 11 passed in 1.56s =====================
 ```
 
 ### 4. Run Evaluation Grader
